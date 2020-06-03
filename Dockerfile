@@ -10,7 +10,7 @@ ARG GDS=neo4j-graph-data-science-1.1.1-standalone.zip
 ARG GDS_URL=https://s3-eu-west-1.amazonaws.com/com.neo4j.graphalgorithms.dist/graph-data-science/${GDS}
 
 ENV NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
-ENV NEO4J_AUTH=neo4j/DS_Training
+ENV NEO4J_AUTH=neo4j/${PASSWORD}
 ENV NEO4JLABS_PLUGINS='["apoc"]'
 
 RUN apt-get update \
