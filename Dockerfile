@@ -8,7 +8,6 @@ LABEL name="Neo4j Graph Data Science" \
 ARG PASSWORD=DS_Training
 ARG GDS=neo4j-graph-data-science-1.1.1-standalone.zip
 ARG GDS_URL=https://s3-eu-west-1.amazonaws.com/com.neo4j.graphalgorithms.dist/graph-data-science/${GDS}
-ARG DATA=graph.db
 
 ENV NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
 ENV NEO4J_AUTH=neo4j/DS_Training
@@ -24,5 +23,4 @@ RUN apt-get update \
     && rm -rf /tmp/* \
     && rm -rf /var/lib/apt/lists/*
     
-COPY  neo4j.conf conf/
-RUN chown -R neo4j:neo4j "${NEO4J_HOME}"
+COPY --chown=neo4j neo4j.conf conf/
