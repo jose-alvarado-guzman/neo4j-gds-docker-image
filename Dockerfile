@@ -1,14 +1,13 @@
-FROM neo4j:3.5.18-enterprise
+FROM neo4j:4.1.0-enterprise
 
 MAINTAINER Jose A Alvarado "jose.alvarado-guzman@neo4j.com"
 
 LABEL name="Neo4j Graph Data Science" \
-      version=2.0
+      version=3.0
 
 ARG PASSWORD=DS_Training
-ARG GDS=neo4j-graph-data-science-1.1.1-standalone.zip
+ARG GDS=neo4j-graph-data-science-1.3.0-preview-standalone.zip
 ARG GDS_URL=https://s3-eu-west-1.amazonaws.com/com.neo4j.graphalgorithms.dist/graph-data-science/${GDS}
-
 ENV NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
 ENV NEO4J_AUTH=neo4j/${PASSWORD}
 ENV NEO4JLABS_PLUGINS='["apoc"]'
