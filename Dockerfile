@@ -6,7 +6,7 @@ LABEL name="Neo4j Graph Data Science" \
       version=3.0
 
 ARG PASSWORD=DS_Training
-ARG GDS=neo4j-graph-data-science-1.3.0-preview-standalone.zip
+ARG GDS=neo4j-graph-data-science-1.3.0-standalone.zip
 ARG GDS_URL=https://s3-eu-west-1.amazonaws.com/com.neo4j.graphalgorithms.dist/graph-data-science/${GDS}
 ENV NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
 ENV NEO4J_AUTH=neo4j/${PASSWORD}
